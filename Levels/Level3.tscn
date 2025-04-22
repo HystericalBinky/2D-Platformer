@@ -1,0 +1,354 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MovingSpikeEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://WalkingEnemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/Banana.tscn" type="PackedScene" id=6]
+[ext_resource path="res://DoorBlockade.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/Bananas.png" type="Texture" id=9]
+[ext_resource path="res://Items/Apple.png" type="Texture" id=10]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 171, -45, 0, 0, 0, 0, 333, 0, 0, 0, 0, 0, 171, 36, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -54, -27, 0, 0, 0, 0, 0, -72, 0, 0, 0, 0, -54, -108, 0, 0, 0, 0, 0, -144, 0, 0, 0, 0, -54, -108, 0, 0, 0, 0, 0, -72, 0, 0, 0, 0, -54, -27, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 36, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 54, 117, 0, 0, 0, 0, 0, 144, 0, 0, 0, 0, 54, 117, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 54, 36, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -54, -27, 0, 0, 0, 0, 0, -72, 0, 0, 0, 0, -54, -108, 0, 0, 0, 0, 0, -144, 0, 0, 0, 0, -54, -108, 0, 0, 0, 0, 0, -72, 0, 0, 0, 0, -54, -27, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 36, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 54, 117, 0, 0, 0, 0, 0, 144, 0, 0, 0, 0, 54, 117, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 54, 36, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 9 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 9 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 9 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 9 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 9 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 9 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 9 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 9 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 9 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 9 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 9 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 9 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 9 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 10 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 10 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 10 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 10 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 10 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 10 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 10 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 10 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 10 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 10 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 10 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 10 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 10 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 10 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 10 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 10 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=41]
+animations = [ {
+"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 6 ), SubResource( 7 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[node name="Level" instance=ExtResource( 1 )]
+
+[node name="MovingSpikeEnemy" parent="." index="0" instance=ExtResource( 4 )]
+position = Vector2( 387, -81 )
+curve = SubResource( 1 )
+
+[node name="TileMap" parent="." index="5" instance=ExtResource( 3 )]
+tile_data = PoolIntArray( -1703915, 83, 0, -1703914, 84, 0, -1703913, 85, 0, -1703903, 83, 0, -1703902, 84, 0, -1703901, 85, 0, -1572845, 1610612821, 0, -1572844, 1610612820, 0, -1572843, 1610612820, 0, -1572842, 1610612820, 0, -1572841, 1610612820, 0, -1572840, 1610612820, 0, -1572839, 1610612820, 0, -1572838, 1610612820, 0, -1572837, 1610612819, 0, -1572835, 1610612821, 0, -1572834, 1610612820, 0, -1572833, 1610612820, 0, -1572832, 1610612820, 0, -1572831, 1610612820, 0, -1572830, 1610612820, 0, -1572829, 1610612820, 0, -1572828, 1610612820, 0, -1572827, 1610612820, 0, -1572826, 1610612819, 0, -1507310, -1610612653, 0, -1507289, -1073741739, 0, -1441774, -1610612652, 0, -1441753, -1073741740, 0, -1376238, -1610612652, 0, -1376234, 84, 0, -1376229, 83, 0, -1376228, 84, 0, -1376227, 85, 0, -1376222, 84, 0, -1376217, -1073741740, 0, -1310702, -1610612652, 0, -1310681, -1073741740, 0, -1245166, -1610612652, 0, -1245159, 84, 0, -1245153, 84, 0, -1245145, -1073741740, 0, -1179630, -1610612652, 0, -1179609, -1073741740, 0, -1114094, -1610612652, 0, -1114090, 84, 0, -1114084, 84, 0, -1114078, 84, 0, -1114073, -1073741740, 0, -1048558, -1610612652, 0, -1048537, -1073741740, 0, -983022, -1610612652, 0, -983015, 84, 0, -983009, 84, 0, -983001, -1073741740, 0, -917486, -1610612652, 0, -917465, -1073741741, 0, -851950, -1610612652, 0, -851946, 84, 0, -851940, 84, 0, -851934, 84, 0, -786414, -1610612652, 0, -720878, -1610612651, 0, -655341, 83, 0, -655340, 84, 0, -655339, 84, 0, -655338, 84, 0, -655337, 84, 0, -655336, 84, 0, -655335, 84, 0, -655334, 84, 0, -655333, 84, 0, -655332, 84, 0, -655331, 84, 0, -655330, 84, 0, -655329, 84, 0, -655328, 84, 0, -655327, 84, 0, -655326, 84, 0, -655325, 84, 0, -655324, 84, 0, -655323, 84, 0, -655322, 84, 0, -655321, 85, 0, -655318, 83, 0, -655317, 84, 0, -655316, 85, 0, -589805, 1610612821, 0, -589804, 1610612820, 0, -589803, 1610612820, 0, -589802, 1610612820, 0, -589801, 1610612820, 0, -589800, 1610612820, 0, -589799, 1610612820, 0, -589798, 1610612820, 0, -589797, 1610612820, 0, -589796, 1610612820, 0, -589795, 1610612820, 0, -589794, 1610612820, 0, -589793, 1610612820, 0, -589792, 1610612820, 0, -589791, 1610612820, 0, -589790, 1610612820, 0, -589789, 1610612820, 0, -589788, 1610612820, 0, -589787, 1610612820, 0, -589786, 1610612820, 0, -589785, 1610612820, 0, -589784, 1610612820, 0, -589783, 1610612819, 0, -524270, -1610612653, 0, -524246, -1073741739, 0, -458734, -1610612652, 0, -458710, -1073741740, 0, -458707, 84, 0, -393198, -1610612652, 0, -393191, 84, 0, -393174, -1073741740, 0, -327662, -1610612651, 0, -327643, 84, 0, -327638, -1073741740, 0, -262111, 84, 0, -262102, -1073741741, 0, -262100, 84, 0, -196587, 84, 0, -196580, 84, 0, -131068, 83, 0, -131067, 84, 0, -131066, 84, 0, -131065, 85, 0, -65518, 83, 0, -65517, 84, 0, -65516, 84, 0, -65515, 84, 0, -65514, 84, 0, -65513, 84, 0, -65512, 84, 0, -65511, 84, 0, -65510, 84, 0, -65509, 84, 0, -65508, 84, 0, -65507, 84, 0, -65506, 84, 0, -65505, 84, 0, -65504, 84, 0, -65503, 84, 0, -65502, 84, 0, -65501, 84, 0, -65500, 84, 0, -65499, 84, 0, -65498, 84, 0, -65497, 84, 0, -65496, 84, 0, -65495, 84, 0, -65494, 84, 0, -65493, 84, 0, -65492, 84, 0, -65491, 84, 0, -65490, 84, 0, -65489, 85, 0, 65534, 83, 0, 65535, 84, 0, 0, 84, 0, 1, 85, 0, 65547, 83, 0, 65548, 84, 0, 65549, 84, 0, 65550, 85, 0 )
+
+[node name="Door" parent="TileMap" index="0" instance=ExtResource( 8 )]
+position = Vector2( 405, -468 )
+target_level_path = "res://GUI/Win.tscn"
+
+[node name="Door2" parent="TileMap" index="1" instance=ExtResource( 8 )]
+position = Vector2( 621, -468 )
+target_level_path = "res://GUI/Lose.tscn"
+
+[node name="Spikes" parent="." index="6" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -135, 144 )
+scale = Vector2( 1000, 1 )
+
+[node name="Spikes23" parent="." index="7" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -135, 144 )
+scale = Vector2( 1000, 1 )
+
+[node name="Spikes24" parent="." index="8" instance=ExtResource( 2 )]
+visible = false
+position = Vector2( -135, 144 )
+scale = Vector2( 1000, 1 )
+
+[node name="Spikes2" parent="." index="9" instance=ExtResource( 2 )]
+position = Vector2( 387, -18 )
+
+[node name="Spikes3" parent="." index="10" instance=ExtResource( 2 )]
+position = Vector2( 405, -18 )
+
+[node name="Spikes4" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( 423, -18 )
+
+[node name="Spikes5" parent="." index="12" instance=ExtResource( 2 )]
+position = Vector2( 441, -18 )
+
+[node name="Spikes6" parent="." index="13" instance=ExtResource( 2 )]
+position = Vector2( 459, -18 )
+
+[node name="Spikes7" parent="." index="14" instance=ExtResource( 2 )]
+position = Vector2( 477, -18 )
+
+[node name="Spikes8" parent="." index="15" instance=ExtResource( 2 )]
+position = Vector2( 495, -18 )
+
+[node name="Spikes9" parent="." index="16" instance=ExtResource( 2 )]
+position = Vector2( 513, -18 )
+
+[node name="Spikes10" parent="." index="17" instance=ExtResource( 2 )]
+position = Vector2( 531, -18 )
+
+[node name="Spikes11" parent="." index="18" instance=ExtResource( 2 )]
+position = Vector2( 549, -18 )
+
+[node name="Spikes12" parent="." index="19" instance=ExtResource( 2 )]
+position = Vector2( 567, -18 )
+
+[node name="Spikes13" parent="." index="20" instance=ExtResource( 2 )]
+position = Vector2( 585, -18 )
+
+[node name="Spikes14" parent="." index="21" instance=ExtResource( 2 )]
+position = Vector2( 603, -18 )
+
+[node name="Spikes15" parent="." index="22" instance=ExtResource( 2 )]
+position = Vector2( 621, -18 )
+
+[node name="Spikes16" parent="." index="23" instance=ExtResource( 2 )]
+position = Vector2( 639, -18 )
+
+[node name="Spikes17" parent="." index="24" instance=ExtResource( 2 )]
+position = Vector2( 648, -18 )
+
+[node name="Spikes18" parent="." index="25" instance=ExtResource( 2 )]
+position = Vector2( 666, -18 )
+
+[node name="Spikes19" parent="." index="26" instance=ExtResource( 2 )]
+position = Vector2( 684, -18 )
+
+[node name="Spikes20" parent="." index="27" instance=ExtResource( 2 )]
+position = Vector2( 702, -18 )
+
+[node name="Spikes21" parent="." index="28" instance=ExtResource( 2 )]
+position = Vector2( 720, -18 )
+
+[node name="WalkingEnemy" parent="." index="29" instance=ExtResource( 5 )]
+position = Vector2( 423, -180 )
+
+[node name="WalkingEnemy8" parent="." index="30" instance=ExtResource( 5 )]
+position = Vector2( 387, -180 )
+
+[node name="WalkingEnemy2" parent="." index="31" instance=ExtResource( 5 )]
+position = Vector2( 495, -180 )
+
+[node name="WalkingEnemy3" parent="." index="32" instance=ExtResource( 5 )]
+position = Vector2( 567, -181 )
+
+[node name="WalkingEnemy4" parent="." index="33" instance=ExtResource( 5 )]
+position = Vector2( 637, -181 )
+
+[node name="WalkingEnemy9" parent="." index="34" instance=ExtResource( 5 )]
+position = Vector2( 673, -180 )
+
+[node name="WalkingEnemy5" parent="." index="35" instance=ExtResource( 5 )]
+position = Vector2( 603, -181 )
+
+[node name="WalkingEnemy6" parent="." index="36" instance=ExtResource( 5 )]
+position = Vector2( 531, -180 )
+
+[node name="WalkingEnemy7" parent="." index="37" instance=ExtResource( 5 )]
+position = Vector2( 459, -180 )
+
+[node name="MovingSpikeEnemy2" parent="." index="38" instance=ExtResource( 4 )]
+position = Vector2( 459, -234 )
+curve = SubResource( 2 )
+
+[node name="MovingSpikeEnemy3" parent="." index="39" instance=ExtResource( 4 )]
+position = Vector2( 459, -378 )
+curve = SubResource( 3 )
+
+[node name="MovingSpikeEnemy4" parent="." index="40" instance=ExtResource( 4 )]
+position = Vector2( 567, -234 )
+curve = SubResource( 4 )
+
+[node name="MovingSpikeEnemy5" parent="." index="41" instance=ExtResource( 4 )]
+position = Vector2( 567, -378 )
+curve = SubResource( 5 )
+
+[node name="Banana" parent="." index="42" instance=ExtResource( 6 )]
+position = Vector2( 234, 0 )
+
+[node name="Banana2" parent="." index="43" instance=ExtResource( 6 )]
+position = Vector2( 558, -117 )
+
+[node name="Banana3" parent="." index="44" instance=ExtResource( 6 )]
+position = Vector2( 513, -198 )
+
+[node name="Banana4" parent="." index="45" instance=ExtResource( 6 )]
+position = Vector2( 459, -306 )
+
+[node name="Banana5" parent="." index="46" instance=ExtResource( 6 )]
+position = Vector2( 567, -306 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="." index="47"]
+position = Vector2( 405, -504 )
+frames = SubResource( 25 )
+frame = 14
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="." index="48"]
+position = Vector2( 621, -504 )
+frames = SubResource( 41 )
+frame = 14
+playing = true
+
+[node name="DoorBlockade" parent="." index="49" instance=ExtResource( 7 )]
+tile_data = PoolIntArray( -2621412, 0, 0, -2555876, 0, 0, -2490340, 0, 0, -2424804, 0, 0, -2359268, 0, 0, -2293732, 0, 0, -2228196, 0, 0, -2162660, 0, 0, -2097124, 0, 0, -2031588, 0, 0, -1966052, 0, 0, -1900516, 0, 0, -1834980, 0, 0, -1769444, 0, 0, -1703908, 0, 0, -1638372, 0, 0, -1572836, 0, 0, -1507300, 0, 0, -1441764, 1, 0 )

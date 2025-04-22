@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Plains.mp3-49fa3616528b377e892f8e412070fef9.mp3str"
+
+[deps]
+
+source_file="res://Music/Plains.mp3"
+dest_files=[ "res://.import/Plains.mp3-49fa3616528b377e892f8e412070fef9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

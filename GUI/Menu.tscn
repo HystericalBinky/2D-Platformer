@@ -1,0 +1,210 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Fonts/AmigaNormal.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://GUI/Menu.gd" type="Script" id=2]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Character/Axolotl_Idle7.png" type="Texture" id=4]
+[ext_resource path="res://Character/Axolotl_Idle1.png" type="Texture" id=5]
+[ext_resource path="res://Character/Axolotl_Idle3.png" type="Texture" id=6]
+[ext_resource path="res://Character/Axolotl_Idle4.png" type="Texture" id=7]
+[ext_resource path="res://Character/Axolotl_Idle5.png" type="Texture" id=8]
+[ext_resource path="res://Character/Axolotl_Idle6.png" type="Texture" id=9]
+[ext_resource path="res://Character/Axolotl_Idle8.png" type="Texture" id=10]
+[ext_resource path="res://Character/Axolotl_Idle2.png" type="Texture" id=11]
+[ext_resource path="res://Character/CavemanIdle4.png" type="Texture" id=12]
+[ext_resource path="res://Character/CavemanIdle2.png" type="Texture" id=13]
+[ext_resource path="res://Character/CavemanIdle3.png" type="Texture" id=14]
+[ext_resource path="res://Character/CavemanIdle1.png" type="Texture" id=15]
+[ext_resource path="res://Items/Bananas.png" type="Texture" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 16 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 16 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 16 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 16 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 16 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 16 )
+region = Rect2( 224, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 16 )
+region = Rect2( 256, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 16 )
+region = Rect2( 288, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 16 )
+region = Rect2( 320, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 16 )
+region = Rect2( 352, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 16 )
+region = Rect2( 384, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 16 )
+region = Rect2( 416, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 16 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 16 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 16 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+outline_color = Color( 0.933333, 0.933333, 0.0352941, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -47.0
+margin_top = -107.0
+margin_right = 47.0
+margin_bottom = -35.0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+margin_right = 104.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+flat = true
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+margin_top = 25.0
+margin_right = 104.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Tutorial"
+flat = true
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+margin_top = 50.0
+margin_right = 104.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+flat = true
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+position = Vector2( 113, 109 )
+tile_data = PoolIntArray( 196603, 82, 0, 196607, 82, 0, 131076, 82, 0, 131082, 82, 0, 131084, 82, 0, 131085, 82, 0, 262137, 73, 0, 262138, 73, 0, 262139, 73, 0, 262140, 73, 0, 262141, 73, 0, 262142, 73, 0, 262143, 73, 0, 196608, 73, 0, 196609, 73, 0, 196610, 73, 0, 196611, 73, 0, 196612, 73, 0, 196613, 73, 0, 196614, 73, 0, 196615, 73, 0, 196616, 73, 0, 196617, 73, 0, 196618, 73, 0, 196619, 73, 0, 196620, 73, 0, 196621, 73, 0, 196622, 73, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 63, 154 )
+frames = SubResource( 4 )
+frame = 7
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 259, 147 )
+scale = Vector2( 0.246094, 0.251953 )
+frames = SubResource( 5 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 301.104, 31.1039 )
+rotation = -0.460277
+scale = Vector2( 1.40625, 1.40625 )
+frames = SubResource( 6 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 13.1039, 31.1039 )
+rotation = 0.572873
+scale = Vector2( 1.40625, 1.40625 )
+frames = SubResource( 6 )
+frame = 3
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = -3.8961
+margin_top = 8.10391
+margin_right = 315.104
+margin_bottom = 61.1039
+custom_colors/font_color = Color( 0.941176, 0.92549, 0.0313726, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Ooga Booga Mans
+Quest for Banana"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="." method="_on_ControlsButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
